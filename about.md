@@ -4,7 +4,7 @@ title: About
 ---
 
 <p class="message">
-  Hi! I'm Alikhan Uzakov. I’m a Senior Security Engineer at FINRA, where I help design, build and secure the stability of financial markets. Previously I worked at Clearswift, PwC, Zoopla, and Marks and Spencer.
+  Hi! I'm Alikhan Uzakov. I’m a Team Lead at FINRA, where I help design, build and secure the stability of financial markets. Previously I worked at Clearswift, PwC, Zoopla, and Marks and Spencer.
 </p>
 
 ![Me]({{ site.url }}/public/images/2020/me.jpg)
