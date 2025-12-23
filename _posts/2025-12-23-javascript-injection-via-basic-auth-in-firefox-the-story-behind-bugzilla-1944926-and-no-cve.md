@@ -1,5 +1,3 @@
-# Firefox bug 1944926: Executing Arbitrary JavaScript from a Third-Party Origin During HTTP Basic Auth - The Story Behind the Missing CVE (And no CVE)
-
 *All opinions in this post are my own (and my colleague's), and do not represent any employer, organization, or institution with which we are or have been affiliated.*
 
 
@@ -23,7 +21,8 @@ That question turned into a rabbit hole, and eventually into an attack vector we
 
 ELI5: You send the victim to a malicious site, then redirect them to a legitimate site's HTTP Basic Auth prompt, while the URL bar shows the legitimate site, you start a file download from the malicious site, and no matter what the victim types into the auth window you force them back to your page, where you use social engineering (and possibly another bug) to convince them to open the file and continue the attack.
 
-Philip (https://www.linkedin.com/in/sysmus3p) and I filed with Mozilla: Bug 1944926 - "Executing arbitrary JavaScript from third-party origin when processing HTTP Basic Auth." And yes: **no CVE**. (which we do not agree with)
+Philip (https://www.linkedin.com/in/sysmus3p) [https://www.linkedin.com/in/sysmus3p ](https://www.linkedin.com/in/sysmus3p )
+and I filed with Mozilla: Bug 1944926 - "Executing arbitrary JavaScript from third-party origin when processing HTTP Basic Auth." And yes: **no CVE**. (which we do not agree with)
 
 
 
@@ -40,7 +39,8 @@ We may be able to execute arbitrary JavaScript from previous origin (attacker co
 ![HTTP Auth]({{ site.url }}/public/images/2025/image11.png "HTTP Auth")
 
 Few ideas we had:
-#### Idea 1: JavaScript Keylogger - FAILED
+
+### Idea 1: JavaScript Keylogger - FAILED
 What if we setup JS even handler to intercept key presses?
 
 Can we log credentials that victim puts into HTTP Basic Auth this way?
@@ -48,7 +48,7 @@ Can we log credentials that victim puts into HTTP Basic Auth this way?
 
 Firefox paused execution of JavaScript when redirecting to HTTP Auth. Events/setInterval are paused. This limitation seems reasonable and secure.
 ![Cat nope]({{ site.url }}/public/images/2025/image13.png "Cat nope")
-#### Idea 2: 
+### Idea 2: 
 
 - You start on an **attacker-controlled** domain: `attacker.tld`.
 - The page navigates to `thirdparty.tld`, which is protected by HTTP Basic Auth.
