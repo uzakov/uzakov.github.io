@@ -1,3 +1,8 @@
+---
+layout: post
+title: Executing arbitrary JavaScript from third-party origin when processing HTTP Basic Auth in Firefox: the story behind Bugzilla 1944926 and no CVE.
+---
+
 *All opinions in this post are my own (and my colleague's), and do not represent any employer, organization, or institution with which we are or have been affiliated.*
 
 
