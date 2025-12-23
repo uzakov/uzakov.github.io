@@ -21,7 +21,7 @@ That question turned into a rabbit hole, and eventually into an attack vector we
 
 ELI5: You send the victim to a malicious site, then redirect them to a legitimate site's HTTP Basic Auth prompt, while the URL bar shows the legitimate site, you start a file download from the malicious site, and no matter what the victim types into the auth window you force them back to your page, where you use social engineering (and possibly another bug) to convince them to open the file and continue the attack.
 
-Philip (https://www.linkedin.com/in/sysmus3p) [https://www.linkedin.com/in/sysmus3p ](https://www.linkedin.com/in/sysmus3p )
+Philip (https://www.linkedin.com/in/sysmus3p) [https://www.linkedin.com/in/sysmus3p ]
 and I filed with Mozilla: Bug 1944926 - "Executing arbitrary JavaScript from third-party origin when processing HTTP Basic Auth." And yes: **no CVE**. (which we do not agree with)
 
 
